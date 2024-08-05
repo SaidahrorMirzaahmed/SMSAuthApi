@@ -2,6 +2,7 @@
 
 public class EnvironmentHelper
 {
+    public static string Token {  get; set; }
     public static string WebRootPath { get; set; }
     public static string JWTKey { get; set; }
     public static string TokenLifeTimeInYears { get; set; }

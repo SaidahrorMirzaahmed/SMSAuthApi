@@ -34,7 +34,7 @@ public class AuthHelper
         var code = random.Next(1000, 9999);
         using (HttpClient client = new HttpClient())
         {
-            string token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjQ5MjU3NTEsImlhdCI6MTcyMjMzMzc1MSwicm9sZSI6InVzZXIiLCJzaWduIjoiM2FiOTcwN2Q4ODRhNTIzMGQwOTUzZDE5ZTMwZGU2NWEyMjgyMzQxNjQ4MjMzOTIwNTNkOTQ5OGMzMWUwOTdmNyIsInN1YiI6Ijc5NzMifQ.Zg-UjfLrHgXHYMlVrmUbbWg24d2KV4tNg3kYZosbMsA";
+            string token = EnvironmentHelper.Token;
            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
             var requestContent = new MultipartFormDataContent();

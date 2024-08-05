@@ -20,6 +20,7 @@ public static class CollectionExtension
     {
         EnvironmentHelper.JWTKey = app.Configuration.GetSection("JWT:Key").Value;
         EnvironmentHelper.TokenLifeTimeInYears = app.Configuration.GetSection("JWT:LifeTime").Value;
+        EnvironmentHelper.Token = app.Configuration.GetSection("Token:Default").Value
     }
 
     public static void AddJwtService(this IServiceCollection services, IConfiguration configuration)
